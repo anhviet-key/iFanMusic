@@ -163,11 +163,11 @@ const app = {
     };
     random.onclick = function () {
       __this.isRandom = !__this.isRandom;
-      random.classList.toggle("active");
+      random.classList.toggle("actives");
     };
     repeat.onclick = function () {
       __this.isRepeat = !__this.isRepeat;
-      repeat.classList.toggle("active");
+      repeat.classList.toggle("actives");
     };
   },
   randoms: function () {
