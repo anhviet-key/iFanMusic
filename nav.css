@@ -1,0 +1,333 @@
+/** @format */
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth !important;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(
+      circle,
+      rgba(63, 94, 251, 1) 0%,
+      rgba(252, 70, 107, 1) 100%
+    );
+    font-family: roboto, arial, helvetica, sans-serif;
+  }
+  .centers {
+    display: flex;
+    justify-content: center;
+  }
+  nav {
+    display: block;
+    position: fixed;
+    bottom: 10px;
+  }
+  nav ul {
+    width: 340px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  nav ul li {
+    list-style-type: none;
+    width: 100px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  nav ul li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+  }
+  .indi {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    top: -42%;
+    background-color: #5beca2;
+    z-index: 999;
+    padding: 15px;
+    border-radius: 1000px;
+    border: 4px solid blueviolet;
+  }
+  /* nav ul li.active a::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  top: 24px;
+  left: -10px;
+  width: 1px;
+  height: 1px;
+  border-top-right-radius: 20px;
+  z-index: 9;
+  box-shadow: 0px -5px 0 0 greenyellow;
+}
+nav ul li.active a::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  top: 24px;
+  right: -10px;
+  width: 1px;
+  height: 1px;
+  border-top-left-radius: 20px;
+  z-index: 9;
+  box-shadow: 0px -5px 0 0 greenyellow;
+} */
+  nav ul li span {
+    opacity: 0;
+  }
+  .indi {
+    transition: 0.5s;
+  }
+  nav ul li.active a {
+    transform: translateY(-28px);
+    transition: 0.5s;
+  }
+  nav ul li.active span {
+    opacity: 1;
+  }
+  nav ul li:nth-child(1).active ~ .indi {
+    transform: translateX(calc(68px * 0));
+  }
+  nav ul li:nth-child(2).active ~ .indi {
+    transform: translateX(calc(68px * 1));
+  }
+  nav ul li:nth-child(3).active ~ .indi {
+    transform: translateX(calc(68px * 2));
+  }
+  nav ul li:nth-child(4).active ~ .indi {
+    transform: translateX(calc(68px * 3));
+  }
+  nav ul li:nth-child(5).active ~ .indi {
+    transform: translateX(calc(68px * 4));
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #wrapper {
+    color: white;
+    padding: 15px;
+    margin-bottom: 82px;
+  }
+  .player {
+    position: relative;
+  }
+  .player .btn {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+  }
+  .btn1,
+  .btn2 {
+    cursor: pointer !important;
+    z-index: 10;
+  }
+  .player__name {
+    text-align: center;
+  }
+  .player__name .name {
+    font-weight: bold;
+  }
+  .player__run {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .img__album {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 1000px;
+    border: 5px solid rgb(0, 200, 255);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .circle {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    border-radius: 1000px;
+    border: 5px solid black;
+    background-color: transparent;
+    left: 212px;
+    top: 192px;
+  }
+  .play__song {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .play__song .title_song {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .playinger {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .listmusic {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .item__card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    margin-top: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  .name_card {
+    display: block;
+    margin-left: 10px;
+    width: 100%;
+  }
+  .card__btn {
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .item__card:hover {
+    background-color: blueviolet;
+  }
+  .btn__ico:hover {
+    cursor: pointer;
+    color: blueviolet;
+  }
+  .process__play {
+    margin-top: 10px;
+  }
+  .process__play input {
+    width: 100%;
+  }
+  .progress {
+    width: 100%;
+    accent-color: cyan;
+    height: 6px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  .fa-pause {
+    display: none;
+  }
+  @keyframes suNi {
+    from {
+      transform: rotate(-360deg);
+    }
+  }
+  .actives {
+    color: cyan;
+  }
+  .songfixed {
+    transition: all 0.1s ease-in-out;
+  }
+  .sets {
+    position: absolute;
+    right: 35px;
+    top: 5px;
+    z-index: 9;
+    color: chartreuse;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    transition: all 0.5s ease-in-out;
+    display: none;
+  }
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    display: none;
+  }
+  .exit {
+    cursor: pointer !important;
+    z-index: 12;
+    font-size: 18px;
+    color: rgba(252, 70, 107, 1);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transform: rotate(180deg);
+  }
+  .setslist {
+    background-color: rgb(55, 50, 50);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 11;
+    transform: translateX(-100%);
+    transition: all 0.5s linear;
+  }
+  .options {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgb(154, 147, 147);
+  }
+  .contents {
+    color: #fff;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    line-height: 1.8;
+    font-size: 20px;
+  }
+  .head {
+    border: 11px solid rgb(4, 0, 255);
+  }
+  .sets::after {
+    content: "";
+    border-left: 13px solid blueviolet;
+    border-right: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    position: absolute;
+    top: 17px;
+    right: -23px;
+    z-index: -2;
+  }
+  .blocks {
+    display: block;
+  }
+  .sets ul {
+    max-width: 120px;
+    min-width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+
+    background-color: blueviolet;
+  }
+  .sets ul li {
+    list-style-type: none;
+    cursor: pointer;
+  }
+  .sets ul li:hover {
+    color: #5beca2;
+  }
+  .hoverdiv:hover {
+    color: blueviolet;
+  }
+  .hoverdiv i {
+    width: 25px;
+    color: aqua;
+  }
+  .hoverdiv {
+    display: flex;
+    align-items: center;
+  }
+}

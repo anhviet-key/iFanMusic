@@ -1,0 +1,142 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="icon" href="https://iforum-sg.c.huawei.com/dddd/aeen/images/2020/11/16/29a6ffb5-f51a-4d25-9f6b-fd1fd8483815.png">
+  </head>
+  <body>
+<div class="setslist">
+        <div class="head">
+          <div class="exit"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+        <div class="options">Options</div>
+        </div>
+        <hr>
+        <div class="contents">
+          <div class="hoverdiv"><i class="fa-solid fa-file-audio"></i>
+            List music in storage
+          </div>
+          <div class="hoverdiv"><i class="fa-solid fa-icons"></i>
+            music list<i class="fa-solid fa-plus" style="font-size:10px;margin-left: 10px;"></i>
+          </div>
+          <div class="hoverdiv"><i class="fa-solid fa-user-pen"></i>
+            Singer list
+          </div>
+          <div class="hoverdiv"><i class="fa-solid fa-download"></i>
+            Download list
+          </div>
+        </div>
+        <div class="foot" style="margin-bottom: 0px;margin-top: 30%;">
+          <img width="100%" src="https://wsstatic.linkfire.com/wp-content/uploads/2020/06/optimise-music-marketing1.png" alt="">
+        </div>
+      </div>
+    <div id="wrapper">
+      <div class="sets">
+        <ul>
+          <li>Profile music</li>
+          <li>About singer</li>
+          <li>Set time</li>
+          <li>Download</li>
+          <li>User</li>
+        </ul>
+      </div>
+          
+      <div class="overlay"></div>
+      <div class="player">
+        <div class="btn">
+          <div class="btn1"><i class="fa-solid fa-bars"></i></div>
+          <div class="btn2"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+        </div>
+        <div class="player__name">
+          <div class="name">Playing from album</div>
+          <span class="album">Album name</span>
+        </div>
+        <!-- <div class="circle"></div> -->
+        <div class="player__run">
+          <div class="btn__pre"></div>
+            <div
+              style="background-image:url('https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/0/6/0/4/0604b2039e6be2b7c8d4f3243b24594d.jpg');"
+              class="img__album"
+            >
+            </div>
+          <div class="btn__next"></div>
+        </div>
+        <div class="songfixed">
+          <div class="play__song">
+          <div class="title_song">title_song</div>
+          <div class="singer">singer</div>
+        </div>
+        <div class="process__play">
+            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+            <audio id="audio" src=""></audio>
+        </div>
+        <div class="playinger">
+          <span class="btn__ico"><i class="fa-solid fa-shuffle"></i></span>
+          <span class="btn__ico"><i class="fa-solid fa-angle-left"></i></span>
+          <span class="btn__ico"><i class="fa-solid fa-angles-left"></i></span>
+          <span class="btn__ico playbtn"><i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i></span>
+          <span class="btn__ico"><i class="fa-solid fa-angles-right"></i></span>
+          <span class="btn__ico"><i class="fa-solid fa-angle-right"></i></span>
+          <span class="btn__ico"><i class="fa-solid fa-repeat"></i></span>
+        </div>
+        </div>
+      </div>
+      <div class="listmusic"></div>
+        </div>
+      </div>
+    </div>
+    <div class="centers">
+      <nav>
+      <ul>
+        <li class="list active home">
+          <a href="#"
+            ><i class="fa-solid fa-house-user"></i> <span>Home </span></a
+          >
+        </li>
+        <li class="list user">
+          <a href="#"><i class="fa-solid fa-user"></i> <span>User </span></a>
+        </li>
+        <li class="list comment">
+          <a href="#"
+            ><i class="fa-regular fa-comment"></i> <span>Mess</span></a
+          >
+        </li>
+        <li class="list headphones">
+          <a href="#"
+            ><i class="fa-solid fa-headphones-simple"></i><span>List</span></a
+          >
+        </li>
+        <li class="list setting">
+          <a href="#"
+            ><i class="fa-solid fa-gear"></i> <span>Settings </span></a
+          >
+        </li>
+        <div class="indi"></div>
+      </ul>
+    </nav>
+    </div>
+  </body>
+  <script src="./scripts.js"></script>
+  <script>
+    const list = document.querySelectorAll(".list");
+    console.log(list);
+    function news() {
+      list.forEach((item) => item.classList.remove("active"));
+      this.classList.add("active");
+    }
+
+    list.forEach((item) => item.addEventListener("click", news));
+  </script>
+</html>
