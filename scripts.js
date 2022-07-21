@@ -257,11 +257,14 @@ function myScript() {
   const s = sets.classList.toggle("blocks");
   if (s) {
     overlays.style.display = "block";
+  } else {
+    overlays.style.display = "none";
   }
 }
 set.addEventListener("click", myScript);
 overlays.onclick = function () {
   sets.classList.remove("blocks");
+  overlays.style.display = "none";
 };
 set1.onclick = function () {
   setslist.style.transform = "translateX(0)";
